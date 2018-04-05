@@ -1,5 +1,10 @@
 
-#Medium intro to react starter pack
+##Medium intro to react starter pack
+
+`yarn`
+`yarn start`
+
+have at!
 
 -----------------------
 
