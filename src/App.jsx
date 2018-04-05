@@ -32,7 +32,7 @@ class App extends Component {
             {this.header()}
             <div className={style(containerStyles)}>
               {seriesJson.map((series) => {
-                return <div key={series.seriesId}>{series.title}</div>
+                return <SeriesCard series={series} />
               })}
             </div>
           </div>

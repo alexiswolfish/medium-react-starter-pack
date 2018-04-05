@@ -3,7 +3,11 @@
 ## Medium intro to react starter pack
 
 `yarn`
+
 `yarn start`
+
+
+Check out herzog's [series demo](http://10.4.0.190:3000/) to see what we'll be building
 
 have at!
 
