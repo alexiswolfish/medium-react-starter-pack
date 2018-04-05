@@ -7,7 +7,8 @@
 `yarn start`
 
 
-Check out herzog's [series demo](http://10.4.0.190:3000/) to see what we'll be building
+Check out herzog's [series landing page demo](http://series-index.surge.sh/) to see what we'll be building
+[series-index.surge.sh/](http://series-index.surge.sh/)
 
 have at!
 
