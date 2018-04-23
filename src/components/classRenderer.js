@@ -1,19 +1,13 @@
 import * as React from 'react'
-import { combineRules, createRenderer } from 'fela'
-import { render } from 'fela-dom'
+import PropTypes from 'prop-types'
+import { combineRules } from 'fela'
 import { flattenDeep } from 'lodash'
 
 export default class ClassRenderer extends React.Component {
-  constructor(props) {
-    super(props)
-    this.renderer = createRenderer()
-  }
-
-  componentDidMount() {
-    render(this.renderer)
-  }
+  static contextTypes = { renderer: PropTypes.object }
 
   render() {
+    const { renderer } = this.context
     const { children } = this.props
 
     const style = (rules) => {
@@ -24,7 +18,7 @@ export default class ClassRenderer extends React.Component {
         .filter(Boolean)
         .map(rule => (typeof rule === 'function' ? rule : () => rule))
       const rule = combineRules(...rulesArr)
-      return this.renderer.renderRule(rule)
+      return renderer.renderRule(rule)
     }
 
     return children(style)

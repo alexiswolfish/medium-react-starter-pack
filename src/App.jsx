@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import { createRenderer } from 'fela'
-import { Provider } from 'react-fela'
 import logo from './logo.svg';
 import './App.css';
 
-import seriesJson from './json.js'
-import SeriesCard from './components/series-card.jsx'
 import ClassRenderer from './components/classRenderer.js'
 
 class App extends Component {
@@ -22,20 +18,19 @@ class App extends Component {
   render() {
     const containerStyles = {
       padding: '60px',
-      textAlign: 'center'
+      textAlign: 'center',
+      height: '100vh',
+      background: 'pink'
     }
 
     return (
       <ClassRenderer>
         {style => (
-          <div className="App">
+          <main className="App">
             {this.header()}
             <div className={style(containerStyles)}>
-              {seriesJson.map((series) => {
-                return <SeriesCard series={series} />
-              })}
             </div>
-          </div>
+          </main>
         )}
       </ClassRenderer>
     );
